@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const JS_SRC = './src/scripts/app.js';
 const JS_DEST = './js';
@@ -24,5 +25,12 @@ module.exports = {
             }
         ]
     },
-    mode: 'development'
+    mode: 'development',
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
+    ]
 };

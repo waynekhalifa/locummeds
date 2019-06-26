@@ -1,0 +1,39 @@
+.testimonials {
+    .owl-dot {
+        background: $light-pink !important;
+        border-radius: 50%;
+        height: $s-size;
+        margin: .3rem;
+        width: $s-size;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &.active {
+            background: $main-color !important;
+        }
+    }
+}
+
+.testimonial__title{
+    color: $main-color;
+    font-size: $xl-size;
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 800px;
+    line-height: .9;
+}
+
+.testimonial__content {
+    max-width: 800px;
+    p {
+        line-height: 1.5;
+        font-size: 1.2rem;
+    }
+}
+
+.testimonial__author {
+    color: $dark-blue;
+    font-size: $m-size;
+}
