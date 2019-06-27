@@ -1,12 +1,19 @@
 /*break points*/
-.grid {
-  width: 22.8571428571%;
-  float: left;
-  margin-right: 2.8571428571%; }
-  .grid:last-child {
-    width: 22.8571428571%;
-    float: right;
-    margin-right: 0; }
+/*============== Footer layout =================*/
+/*============ Home page layout ================*/
+.services:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media (min-width: 1200px) {
+  .services .service {
+    width: 33.3333333333%;
+    float: left; }
+    .services .service:last-child {
+      width: 33.3333333333%;
+      float: right;
+      margin-right: 0; } }
 
 * {
   -webkit-box-sizing: border-box;
@@ -97,12 +104,44 @@ p {
   font-size: 2.4rem;
   margin-bottom: 1.6rem; }
 
+.services {
+  margin: 0;
+  padding: 0 !important; }
+
 .service {
+  position: relative;
+  height: 306px;
+  overflow: hidden; }
+  .service:nth-child(2n) .service__content {
+    background: #9978B0; }
+  .service:nth-child(2n) .service__title::before {
+    content: "\f0d0"; }
+  .service:last-child .service__content {
+    background: #B5E0FC; }
+  .service:last-child .service__title::before {
+    content: "\f003"; }
+  .service:hover .service__content {
+    margin-top: -170px; }
+  .service:hover .service__action {
+    bottom: 170px; }
+
+.service__content {
   background: #3fa7da;
   text-align: center;
-  position: relative; }
-  .service:last-of-type {
-    background: #9978B0; }
+  height: 306px;
+  margin-top: 0;
+  padding: 1.6rem;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease-out;
+  /* Safari and Chrome */
+  -moz-transition: all 0.5s ease-out;
+  /* Firefox */
+  -ms-transition: all 0.5s ease-out;
+  /* IE 9 */
+  -o-transition: all 0.5s ease-out;
+  /* Opera */
+  transition: all 0.5s ease-out; }
 
 .service__title {
   color: white;
@@ -121,16 +160,14 @@ p {
   font-size: 1rem;
   line-height: 1.5; }
 
-.service__description {
-  bottom: 0;
-  left: 0;
+.service__action {
+  height: 170px;
+  background: green;
   color: white;
-  font-size: 1rem;
-  line-height: 1.5;
-  height: 1px;
-  position: absolute;
+  margin: 0;
   padding: 1.6rem;
-  width: 100%; }
+  font-size: 0.8rem;
+  text-align: start; }
 
 .testimonials {
   background: url("./img/testimonials-bg.png") no-repeat;

@@ -1,17 +1,13 @@
 //susy configurations
 $susy: (
-  columns: 12,
-  gutters: 0.5,
-  //gutter-position: inside,
-  global-box-sizing: border-box,
-  //output: isolate
-  flow: susy-get(flow)
+	columns: 12,
+	gutters: 0.5,
+	//gutter-position: inside,
+	global-box-sizing: border-box,
+	//output: isolate
+	flow: susy-get(flow)
 );
 
-$map:(
- columns: 12,
- gutters: 0.1
-);
 /*break points*/
 $bp-mobile: 320px; 
 $bp-tablet: 768px;
@@ -21,11 +17,37 @@ $bp-desktop: 1200px;
 // $bp-tablet-to-desktop: $bp-tablet $bp-desktop;
 
 $main-width: 1170px;
+$no-gatters: (
+	gutters: 0
+);
 
-.grid {
-  @include span(3 of 12);
-
-  &:last-child {
-    @include span(3 of 12 last);
-  }
+/*============== Footer layout =================*/
+.main-footer {
+	// @include span(12 of 12);
 }
+
+/*============ Home page layout ================*/
+
+.services {
+	// @include span(12 of 12);
+	@include clearfix;
+	@include breakpoint($bp-desktop){
+		@include with-layout($no-gatters) {
+			.service {
+				@include span(4 of 12);
+				&:last-child {
+					@include span(4 of 12 last);
+				}
+			}
+		}
+	}
+}
+
+.about {
+	// @include span(12 of 12);
+}
+
+.testimonials {
+	// @include span(12 of 12);
+}
+
