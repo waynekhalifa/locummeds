@@ -1,0 +1,16 @@
+.about {
+    @extend .section;
+    background: url('./img/about-bg.png') no-repeat center 100%;
+    padding: $l-size 0;
+
+    p {
+        max-width: 800px;
+        line-height: 1.5;
+        font-size: 1.2rem;
+    }
+}
+
+.about__title {
+    font-size: $l-size;
+    margin-bottom: $m-size;
+}

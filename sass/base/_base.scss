@@ -11,11 +11,11 @@ body {
     color: $main-color;
 }
 
-h1 {
-    align-items: center;
-    display: flex;
-    font-size: 3.2rem;
-    justify-content: center;
-    height: 100vh;
+p {
     margin: 0;
+}
+
+.section {
+    margin-top: $xl-size;
+    margin-bottom: $xl-size;
 }

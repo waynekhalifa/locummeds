@@ -1,4 +1,7 @@
 .testimonials {
+    background: url('./img/testimonials-bg.png') no-repeat;
+    padding: $l-size 0 $l-size 30rem;
+
     .owl-dot {
         background: $light-pink !important;
         border-radius: 50%;

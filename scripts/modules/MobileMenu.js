@@ -2,8 +2,9 @@ class MobileMenu {
     constructor() {
         this.events();
     }
+
     events() {
-        console.log('Default is working!!!');
+        console.log('This is working for sure');
     }
 }
 

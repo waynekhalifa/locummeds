@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const JS_SRC = './src/scripts/app.js';
+const JS_SRC = './scripts/app.js';
 const JS_DEST = './js';
 
 module.exports = {

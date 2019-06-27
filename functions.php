@@ -122,6 +122,7 @@ add_action( 'widgets_init', 'locummeds_child_widgets_init' );
 function locummeds_child_scripts() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'locummeds-child-style', get_stylesheet_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'owl-style', get_stylesheet_directory_uri() . '/js/owl/owl.carousel.min.css' );
 
 	wp_enqueue_script( 'locummeds-child-script', get_stylesheet_directory_uri() . '/js/bundle.js', true, false );
